@@ -29,6 +29,12 @@ body {
   width: auto;
 }
 
+@media (max-width: 768px) {
+  .logo {
+    height: 90px;
+  }
+}
+
 nav a {
   margin-left: 20px;
   text-decoration: none;
@@ -97,5 +103,6 @@ nav a:hover {
   background: var(--soft-white);
   font-size: 0.9rem;
 }
+
 
 
