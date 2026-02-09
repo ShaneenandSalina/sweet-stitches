@@ -25,7 +25,8 @@ body {
 }
 
 .logo {
-  max-height: 90px;
+  height: 120px;
+  width: auto;
 }
 
 nav a {
@@ -96,3 +97,4 @@ nav a:hover {
   background: var(--soft-white);
   font-size: 0.9rem;
 }
+
