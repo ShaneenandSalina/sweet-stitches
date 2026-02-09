@@ -25,7 +25,7 @@ body {
 }
 
 .logo {
-  height: 120px;
+  height: 140px;
   width: auto;
 }
 
@@ -97,4 +97,5 @@ nav a:hover {
   background: var(--soft-white);
   font-size: 0.9rem;
 }
+
 
