@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sweet Stitches</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Allura&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="site-header">
+  <img src="images/sweet-stitches-logo.png" alt="Sweet Stitches Logo" class="logo">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Handcrafted With Love</h1>
+  <p>Custom sewing, embroidery, and handmade creations</p>
+</section>
+
+<section id="about" class="section">
+  <h2>About Sweet Stitches</h2>
+  <p>
+    Sweet Stitches specializes in beautifully handcrafted sewing and embroidery
+    pieces made with care, creativity, and attention to detail.
+  </p>
+</section>
+
+<section id="services" class="section soft-bg">
+  <h2>Services</h2>
+  <ul class="services-list">
+    <li>Custom Embroidery</li>
+    <li>Quilted & Handmade Items</li>
+    <li>Personalized Gifts</li>
+    <li>Children & Baby Items</li>
+  </ul>
+</section>
+
+<section id="gallery" class="section">
+  <h2>Gallery</h2>
+  <p>Coming soon — showcasing recent creations ✨</p>
+</section>
+
+<section id="contact" class="section soft-bg">
+  <h2>Get in Touch</h2>
+  <p>Email: <a href="mailto:hello@sweetstitches.com">hello@sweetstitches.com</a></p>
+  <p>Follow on social media for updates and new designs</p>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Sweet Stitches • Handmade with ❤️</p>
+</footer>
+
+</body>
+</html>

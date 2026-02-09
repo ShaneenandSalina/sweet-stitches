@@ -1,0 +1,98 @@
+/* Color Palette */
+:root {
+  --pink: #e9a6b3;
+  --lavender: #c7b6dd;
+  --soft-white: #faf8fb;
+  --text-dark: #2f2f2f;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-dark);
+  background-color: white;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: var(--soft-white);
+}
+
+.logo {
+  max-height: 90px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--pink);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, white, var(--soft-white));
+}
+
+.hero h1 {
+  font-family: 'Allura', cursive;
+  font-size: 4rem;
+  color: var(--pink);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--lavender);
+}
+
+.soft-bg {
+  background-color: var(--soft-white);
+  border-radius: 12px;
+}
+
+/* Services */
+.services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li {
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--soft-white);
+  font-size: 0.9rem;
+}
