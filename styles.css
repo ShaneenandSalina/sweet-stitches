@@ -1,4 +1,6 @@
-/* Color Palette */
+/* ===============================
+   Color Palette
+================================ */
 :root {
   --pink: #e9a6b3;
   --lavender: #c7b6dd;
@@ -6,7 +8,9 @@
   --text-dark: #2f2f2f;
 }
 
-/* Global Styles */
+/* ===============================
+   Global Styles
+================================ */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -15,7 +19,44 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* ===============================
+   Thread Wrap Effect
+================================ */
+.thread-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.thread-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -80px;
+  background-image: url("thread.svg");
+  background-repeat: no-repeat;
+  background-size: 120% auto;
+  background-position: center top;
+  pointer-events: none;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.thread-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes stitchFlow {
+  from { background-position: center top; }
+  to { background-position: center bottom; }
+}
+
+.thread-wrapper::before {
+  animation: stitchFlow 45s linear infinite;
+}
+
+/* ===============================
+   Header
+================================ */
 .site-header {
   display: flex;
   align-items: center;
@@ -46,7 +87,9 @@ nav a:hover {
   color: var(--pink);
 }
 
-/* Hero Section */
+/* ===============================
+   Hero Section
+================================ */
 .hero {
   text-align: center;
   padding: 80px 20px;
@@ -65,7 +108,9 @@ nav a:hover {
   color: #555;
 }
 
-/* Sections */
+/* ===============================
+   Sections
+================================ */
 .section {
   padding: 60px 20px;
   max-width: 900px;
@@ -85,7 +130,9 @@ nav a:hover {
   border-radius: 12px;
 }
 
-/* Services */
+/* ===============================
+   Services
+================================ */
 .services-list {
   list-style: none;
   padding: 0;
@@ -96,7 +143,9 @@ nav a:hover {
   font-size: 1.1rem;
 }
 
-/* Footer */
+/* ===============================
+   Footer
+================================ */
 .footer {
   text-align: center;
   padding: 30px;
@@ -104,31 +153,7 @@ nav a:hover {
   font-size: 0.9rem;
 }
 
-/* ===== Decorative Thread Overlay ===== */
-.thread-wrapper {
-  position: relative;
-  overflow: hidden;
-}
 
-/* Thread SVG background */
-.thread-wrapper::before {
-  content: "";
-  position: absolute;
-  inset: -60px;
-  background-image: url("https://static.wixstatic.com/media/YOUR_THREAD_SVG.svg");
-  background-repeat: no-repeat;
-  background-size: 120% auto;
-  background-position: center top;
-  pointer-events: none;
-  opacity: 0.9;
-  z-index: 0;
-}
-
-/* Ensures content stays above the thread */
-.thread-wrapper > * {
-  position: relative;
-  z-index: 1;
-}
 
 
 
