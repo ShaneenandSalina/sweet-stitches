@@ -104,6 +104,32 @@ nav a:hover {
   font-size: 0.9rem;
 }
 
+/* ===== Decorative Thread Overlay ===== */
+.thread-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Thread SVG background */
+.thread-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -60px;
+  background-image: url("https://static.wixstatic.com/media/YOUR_THREAD_SVG.svg");
+  background-repeat: no-repeat;
+  background-size: 120% auto;
+  background-position: center top;
+  pointer-events: none;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+/* Ensures content stays above the thread */
+.thread-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
 
 
 
