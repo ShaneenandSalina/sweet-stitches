@@ -12,10 +12,12 @@ body {
   background-color: white;
   line-height: 1.6;
   position: relative;
+  overflow-x: hidden;
 }
 
+/* Decorative thread */
 .thread-path {
-  position: absolute;
+  position: fixed;
   top: 140px;
   left: 60px;
   width: 4px;
@@ -28,7 +30,7 @@ body {
     transparent 14px
   );
   border-radius: 4px;
-  opacity: 0.9;
+  opacity: 0.85;
   animation: threadMove 30s linear infinite;
   z-index: 0;
 }
@@ -40,6 +42,7 @@ body {
 
 .stitched-section {
   position: relative;
+  z-index: 1;
 }
 
 .stitched-section::before {
@@ -55,39 +58,24 @@ body {
   z-index: 2;
 }
 
+/* Header */
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px 20px 120px;
   background: var(--soft-white);
-  position: relative;
-  z-index: 1;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
-  height: 180px;
+  height: 160px;
   width: auto;
 }
 
-@media (max-width: 768px) {
-  .logo {
-    height: 90px;
-  }
-
-  .thread-path {
-    left: 30px;
-  }
-
-  .stitched-section::before {
-    left: 22px;
-  }
-
-  .site-header {
-    padding-left: 80px;
-  }
-}
-
+/* Navigation */
 nav a {
   margin-left: 20px;
   text-decoration: none;
@@ -99,12 +87,11 @@ nav a:hover {
   color: var(--pink);
 }
 
+/* Hero */
 .hero {
   text-align: center;
   padding: 80px 20px 80px 120px;
   background: linear-gradient(to bottom, white, var(--soft-white));
-  position: relative;
-  z-index: 1;
 }
 
 .hero h1 {
@@ -119,13 +106,12 @@ nav a:hover {
   color: #555;
 }
 
+/* Sections */
 .section {
   padding: 60px 20px 60px 120px;
   max-width: 900px;
   margin: auto;
   text-align: center;
-  position: relative;
-  z-index: 1;
 }
 
 .section h2 {
@@ -140,6 +126,7 @@ nav a:hover {
   border-radius: 12px;
 }
 
+/* Services */
 .services-list {
   list-style: none;
   padding: 0;
@@ -150,14 +137,36 @@ nav a:hover {
   font-size: 1.1rem;
 }
 
+/* Footer */
 .footer {
   text-align: center;
   padding: 40px 20px 40px 120px;
   background: var(--soft-white);
   font-size: 0.9rem;
-  position: relative;
-  z-index: 1;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo {
+    height: 90px;
+  }
+
+  .thread-path {
+    left: 25px;
+  }
+
+  .stitched-section::before {
+    left: 22px;
+  }
+
+  .site-header,
+  .hero,
+  .section,
+  .footer {
+    padding-left: 80px;
+  }
+}
+
 
 
 
