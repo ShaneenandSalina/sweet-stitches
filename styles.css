@@ -1,6 +1,3 @@
-/* ===============================
-   Color Palette
-================================ */
 :root {
   --pink: #e9a6b3;
   --lavender: #c7b6dd;
@@ -8,61 +5,64 @@
   --text-dark: #2f2f2f;
 }
 
-/* ===============================
-   Global Styles
-================================ */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   color: var(--text-dark);
   background-color: white;
   line-height: 1.6;
-}
-
-/* ===============================
-   Thread Wrap Effect
-================================ */
-.thread-wrapper {
   position: relative;
-  overflow: hidden;
 }
 
-.thread-wrapper::before {
-  content: "";
+.thread-path {
   position: absolute;
-  inset: -80px;
-  background-image: url("thread.svg");
-  background-repeat: no-repeat;
-  background-size: 120% auto;
-  background-position: center top;
-  pointer-events: none;
+  top: 140px;
+  left: 60px;
+  width: 4px;
+  height: calc(100% - 140px);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--pink),
+    var(--pink) 6px,
+    transparent 6px,
+    transparent 14px
+  );
+  border-radius: 4px;
   opacity: 0.9;
+  animation: threadMove 30s linear infinite;
   z-index: 0;
 }
 
-.thread-wrapper > * {
+@keyframes threadMove {
+  from { background-position: 0 0; }
+  to { background-position: 0 200px; }
+}
+
+.stitched-section {
   position: relative;
-  z-index: 1;
 }
 
-@keyframes stitchFlow {
-  from { background-position: center top; }
-  to { background-position: center bottom; }
+.stitched-section::before {
+  content: "";
+  position: absolute;
+  left: 52px;
+  top: -18px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--pink);
+  border-radius: 50%;
+  background: white;
+  z-index: 2;
 }
 
-.thread-wrapper::before {
-  animation: stitchFlow 45s linear infinite;
-}
-
-/* ===============================
-   Header
-================================ */
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 20px 40px 20px 120px;
   background: var(--soft-white);
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
@@ -73,6 +73,18 @@ body {
 @media (max-width: 768px) {
   .logo {
     height: 90px;
+  }
+
+  .thread-path {
+    left: 30px;
+  }
+
+  .stitched-section::before {
+    left: 22px;
+  }
+
+  .site-header {
+    padding-left: 80px;
   }
 }
 
@@ -87,13 +99,12 @@ nav a:hover {
   color: var(--pink);
 }
 
-/* ===============================
-   Hero Section
-================================ */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 80px 20px 80px 120px;
   background: linear-gradient(to bottom, white, var(--soft-white));
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -108,14 +119,13 @@ nav a:hover {
   color: #555;
 }
 
-/* ===============================
-   Sections
-================================ */
 .section {
-  padding: 60px 20px;
+  padding: 60px 20px 60px 120px;
   max-width: 900px;
   margin: auto;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .section h2 {
@@ -130,9 +140,6 @@ nav a:hover {
   border-radius: 12px;
 }
 
-/* ===============================
-   Services
-================================ */
 .services-list {
   list-style: none;
   padding: 0;
@@ -143,15 +150,16 @@ nav a:hover {
   font-size: 1.1rem;
 }
 
-/* ===============================
-   Footer
-================================ */
 .footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px 20px 40px 120px;
   background: var(--soft-white);
   font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
 }
+
+
 
 
 
